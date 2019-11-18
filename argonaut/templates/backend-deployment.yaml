@@ -28,7 +28,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   key: password
-                  name: ArgonautGithubToken
+                  name: argonaut-github-token
           ports:
             - containerPort: {{ .Values.backend.appPort }}
               protocol: TCP
