@@ -1,18 +1,22 @@
-WTIwNU1XUkhWVFpEYVVGbldsYzFhRmx0ZUd4YVJHOW5aRWhLTVZwUmIyZEpS
-MmgyWXpOUk5rbERTbWhqCmJXUjJZbTFHTVdSRE5XaGpTRUo2Q2t4dFNtaGlS
-emx3WXpKVmRWcEhWakpKWjNCcFdWZE9jbHBYTld0UApaMjluU1VoS2JHTkhl
-SEJaTWtaRVlqTldkV1JFYjJkTlVXOW5TVWRHZHdwalJrSjJZMjVSTmtsRVoz
-ZFAKUkVGTFNVTkNjMkZZV214aWJWWjZZekZDZVdJeVNteFZSMFl3WVVSdlox
-bFlRbkJNTWtacVpFaFdhR1JICk9Ya0tUREpvYkZsWGVEQmhRVzluU1VoS2JG
-bFhVbkJpYlZaNll6RkNlV0l5U214VlIwWXdZVVJ2WjFsWQpRbkJNTWtacVpF
-aFdhR1JIT1hsTU1taHNDbGxYZURCaFFXOW5TVWRzZEZsWFpHeFBaMjluU1VO
-QloyTnQKVm5kaU0wNXdaRWM1ZVdWVWIyZFpiVVp6WWpKc2VscFhiSFZaTTFa
-cFdWaFNkZ3BqYVRsb1kyMWtkbUp0ClJqRmtRVzluU1VOQloyUkhSbTVQYVVK
-dFdsZEdNRXhZUW5sWU1tUndaRWRvTVZscE1FdEpRMEZuU1VoQwpNV0pIZUZF
-S1lqSjRjRmt6YXpaSlJVWnpaREpHTldOM2IyZEpTRTVzWTI1YWNGa3lWVFpE
-YVVGblNVTkMKTUdWWVFteFBhVUpFWWtoV2VtUkhWbmxUVmtGTENrbERRV2RK
-U0VKMlkyNVJOa2xFWjNkRGFVRm5ZMjA1Ck1XUkhWVFpEYVVGblNVTkNiR0p0
-Um1saVIxWnJUMmxDTUdOdVZteERhVUZuU1VOQ2R3cFpXRkp2VDJsQgpka05w
-UVdkamJWWjZZak5XZVZreVZucFBhVUkzWmxGdlowbEhOWFphUjFaVVdsZDRi
-Rmt6VW5aamFtOW4KWlRNd1MwbERRakFLWWpKNGJHTnRSakJoVnpsMVkzcHZa
-MWN4TUV0SlEwSm9XbTFhY0dKdGJEQmxWRzluClpUTXdTME5uYnowSwo=
+route:
+  enabled: true
+  host: "argonaut.apps.baloise.dev"
+backend:
+  replicaCount: 1
+  appPort: 8080
+  livenessProbePath: api/actuator/health
+  readinessProbePath: api/actuator/health
+  image:
+    repository: baloiseincubator/argonaut
+    tag: feat-pr_github-
+    pullPolicy: Always
+  service:
+    type: ClusterIP
+    port: 80
+  route:
+    enabled: true
+    path: /
+  resources: {}
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
