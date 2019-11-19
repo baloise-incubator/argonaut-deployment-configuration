@@ -23,6 +23,9 @@ spec:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.backend.image.repository }}:{{ .Values.backend.image.tag }}"
           imagePullPolicy: {{ .Values.backend.image.pullPolicy }}
+          volumeMounts:
+            - mountPath: /temp
+              name: temp-gitdir-volume
           env:
             - name: GITHUB_TOKEN
               valueFrom:
@@ -58,9 +61,6 @@ spec:
       tolerations:
 {{ toYaml . | indent 8 }}
     {{- end }}
-        volumeMounts:
-          - mountPath: /temp
-            name: temp-gitdir-volume
       volumes:
         - name: temp-gitdir-volume
           emptyDir: {}
