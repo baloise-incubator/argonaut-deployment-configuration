@@ -58,3 +58,9 @@ spec:
       tolerations:
 {{ toYaml . | indent 8 }}
     {{- end }}
+        volumeMounts:
+          - mountPath: /temp
+            name: temp-gitdir-volume
+      volumes:
+        - name: temp-gitdir-volume
+          emptyDir: {}
