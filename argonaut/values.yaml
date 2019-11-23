@@ -1,22 +1,10 @@
-route:
-  enabled: true
-  host: "argonaut.apps.baloise.dev"
-backend:
-  replicaCount: 1
-  appPort: 8080
-  livenessProbePath: api/actuator/health
-  readinessProbePath: api/actuator/health
-  image:
-    repository: baloiseincubator/argonaut
-    tag: feat-pr_github-
-    pullPolicy: Always
-  service:
-    type: ClusterIP
-    port: 80
-  route:
-    enabled: true
-    path: /
-  resources: {}
-  nodeSelector: {}
-  tolerations: []
-  affinity: {}
+cm91dGU6CiAgZW5hYmxlZDogdHJ1ZQogIGhvc3Q6ICJhcmdvbmF1dC5hcHBz
+LmJhbG9pc2UuZGV2IgpiYWNrZW5kOgogIHJlcGxpY2FDb3VudDogMQogIGFw
+cFBvcnQ6IDgwODAKICBsaXZlbmVzc1Byb2JlUGF0aDogYXBpL2FjdHVhdG9y
+L2hlYWx0aAogIHJlYWRpbmVzc1Byb2JlUGF0aDogYXBpL2FjdHVhdG9yL2hl
+YWx0aAogIGltYWdlOgogICAgcmVwb3NpdG9yeTogYmFsb2lzZWluY3ViYXRv
+ci9hcmdvbmF1dAogICAgdGFnOiBmZWF0LXByX2dpdGh1Yi0KICAgIHB1bGxQ
+b2xpY3k6IEFsd2F5cwogIHNlcnZpY2U6CiAgICB0eXBlOiBDbHVzdGVySVAK
+ICAgIHBvcnQ6IDgwCiAgcm91dGU6CiAgICBlbmFibGVkOiB0cnVlCiAgICBw
+YXRoOiAvCiAgcmVzb3VyY2VzOiB7fQogIG5vZGVTZWxlY3Rvcjoge30KICB0
+b2xlcmF0aW9uczogW10KICBhZmZpbml0eToge30K
