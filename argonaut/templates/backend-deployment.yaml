@@ -32,6 +32,8 @@ spec:
                 secretKeyRef:
                   key: password
                   name: argonaut-github-token
+            - name: TEMP_FOLDER
+              value: "/temp"
           ports:
             - containerPort: {{ .Values.backend.appPort }}
               protocol: TCP
