@@ -8,7 +8,7 @@ backend:
   readinessProbePath: api/actuator/health
   image:
     repository: baloiseincubator/argonaut
-    tag: none
+    tag: latest
     pullPolicy: Always
   service:
     type: ClusterIP
