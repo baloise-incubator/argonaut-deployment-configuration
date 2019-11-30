@@ -27,11 +27,13 @@ spec:
             - mountPath: /temp
               name: temp-gitdir-volume
           env:
-            - name: GITHUB_TOKEN
+            - name: GIT_TOKEN
               valueFrom:
                 secretKeyRef:
                   key: password
                   name: argonaut-github-token
+            - name: GIT_KIND
+              value: "github"
             - name: TEMP_FOLDER
               value: "/temp"
           ports:
