@@ -8,7 +8,7 @@ backend:
   readinessProbePath: api/actuator/health
   image:
     repository: baloiseincubator/argonaut
-    tag: feat-pr_creation-5399ca8ee79fb96f35c5538f04f70dc96518470c
+    tag: feat-pr_creation-c603577b958938ca4ea9af43717946b417b7bdbd
     pullPolicy: Always
   service:
     type: ClusterIP
