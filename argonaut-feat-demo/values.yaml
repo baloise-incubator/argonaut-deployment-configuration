@@ -1,0 +1,22 @@
+route:
+  enabled: true
+  host: argonaut.apps.baloise.dev
+backend:
+  replicaCount: 1
+  appPort: 8080
+  livenessProbePath: api/actuator/health
+  readinessProbePath: api/actuator/health
+  image:
+    repository: baloiseincubator/argonaut
+    tag: feat-demo-0e05a472c7cc264ffacdff6edb060686c858471d
+    pullPolicy: Always
+  service:
+    type: ClusterIP
+    port: 80
+  route:
+    enabled: true
+    path: /
+  resources: {}
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
