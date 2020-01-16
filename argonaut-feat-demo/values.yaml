@@ -2,6 +2,7 @@ route:
   enabled: true
   host: argonaut.apps.baloise.dev
 backend:
+#COMMENT
   replicaCount: 1
   appPort: 8080
   livenessProbePath: api/actuator/health
